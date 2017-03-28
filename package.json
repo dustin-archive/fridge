@@ -1,0 +1,40 @@
+{
+  "name": "blueprint",
+  "description": "A Vue.js project",
+  "author": "Dustin Dowell <dustindowell22@gmail.com>",
+  "private": true,
+  "scripts": {
+    "watchify": "watchify -v -p browserify-hmr src/main.js -o dist/build.js",
+    "serve": "http-server -osc 1 -a localhost",
+    "dev": "run-p watchify serve",
+    "build": "cross-env NODE_ENV=production browserify -g envify src/main.js | uglifyjs -c warnings=false -m > dist/build.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "pilot-reset": "^4.0.0",
+    "vue": "^2.2.6",
+    "vue-router": "^2.3.0",
+    "vuex": "^2.2.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "browserify-hmr": "^0.3.5",
+    "cross-env": "^3.2.4",
+    "envify": "^4.0.0",
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1",
+    "http-server": "^0.9.0",
+    "node-sass": "^4.5.1",
+    "npm-run-all": "^4.0.2",
+    "uglify-js": "^2.8.16",
+    "vueify": "^9.4.1",
+    "watchify": "^3.9.0"
+  },
+  "browserify": {
+    "transform": [
+      "vueify"
+    ]
+  }
+}

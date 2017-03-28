@@ -1,0 +1,23 @@
+@import 'global';
+
+// variables
+$gutter: 16px;
+
+.communities {
+  display: flex;
+  padding: $gutter;
+
+  a {
+    width: 200px;
+    height: 200px;
+    margin: $gutter;
+    border: solid 2px $light-1;
+    border-radius: 4px;
+    font-size: 24px;
+    text-align: center;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
