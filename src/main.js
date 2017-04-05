@@ -7,13 +7,14 @@ Vue.use(Vuex)
 
 var router = new VueRouter({
   routes: [
+    { path: '', redirect: '/home' },
     { path: '/home', component: require('./views/home/main.vue') },
-
     { path: '/communities', component: require('./views/communities/main.vue') },
     { path: '/faq', component: require('./views/faq/main.vue') },
     { path: '/jobs', component: require('./views/jobs/main.vue') },
     { path: '/merch', component: require('./views/merch/main.vue') },
-    { path: '/statistics', component: require('./views/statistics/main.vue') }
+    { path: '/statistics', component: require('./views/statistics/main.vue') },
+    { path: '/admins', component: require('./views/admins/main.vue') }
   ]
 })
 
