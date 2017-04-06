@@ -5,17 +5,9 @@
 // variables
 $gutter: 16px;
 
-// computed variables
-
-* {
-  &::selection {
-    background: $blue-2;
-  }
-}
-
 body {
-  color: $dark-1;
   font: 400 1rem/1 Gidole, sans-serif;
+  background: $light;
 }
 
 .app-view {
@@ -23,24 +15,21 @@ body {
   padding: $gutter * 2;
 }
 
-.app-rule {
-  width: 2px;
-  background: linear-gradient(transparent, $light-1, transparent);
-}
-
 .app-side {
   display: flex;
   flex-flow: column;
   width: 256px;
-  padding: $gutter;
+  padding: $gutter 0;
+  color: $light;
+  background: linear-gradient($emerald-dark 12.5%, $emerald-light 87.5%);
 
   a {
-    padding: $gutter;
+    padding: $gutter ($gutter * 2);
 
     &:hover {
       border-radius: 2px;
       text-decoration: none;
-      background: $light-1;
+      background: linear-gradient(90deg, $emerald-light, transparent);
     }
   }
 }
